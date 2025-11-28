@@ -168,20 +168,19 @@ body {
   cursor: pointer;
   z-index: 10;
 }
-@media (max-width: 900px) {
-  .circle {
-    width: 200px;
-    height: 200px;
-  }
+  /* Automatic responsiveness */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
-  #modalIframe {
-    height: 250px;
+/* Very Small Phones (Galaxy A series, iPhone SE, etc.) */
+@media (max-width: 360px) {
+  .card {
+    padding: 10px;
+  }
+  .card p {
+    font-size: 12px;
+  }
+  .blog-card {
+    gap: 15px;
   }
 }
-
-/* Large Phones */
-@media (max-width: 600px) {
-  body {
-    padding: 0;
-  }
 
