@@ -168,19 +168,18 @@ body {
   cursor: pointer;
   z-index: 10;
 }
-  /* Automatic responsiveness */
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  
 
 /* Very Small Phones (Galaxy A series, iPhone SE, etc.) */
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   .card {
-    padding: 10px;
+    padding: 0.5rem;
   }
   .card p {
-    font-size: 12px;
+    font-size: 1rem;
   }
   .blog-card {
-    gap: 15px;
+    gap: 1rem;
   }
 }
 
