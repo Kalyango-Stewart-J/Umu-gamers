@@ -168,3 +168,20 @@ body {
   cursor: pointer;
   z-index: 10;
 }
+@media (max-width: 900px) {
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  #modalIframe {
+    height: 250px;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
