@@ -13,13 +13,12 @@ function goToTop() {
 }
 
 
-  // Get current year
-  const currentYear = new Date().getFullYear();
-  // Set it in the span with id="year"
-  document.getElementById('year').textContent = currentYear;
-
-
-
+document.addEventListener("DOMContentLoaded", function () {
+    let yearSpan = document.getElementById("currentYear");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+});
 
   // Some browsers block autoplay with sound
   // This will unmute and play after the first user click
