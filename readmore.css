@@ -168,18 +168,95 @@ body {
   cursor: pointer;
   z-index: 10;
 }
-  
 
-/* Very Small Phones (Galaxy A series, iPhone SE, etc.) */
-@media (max-width: 375px) {
-  .card {
-    padding: 0.5rem;
-  }
-  .card p {
-    font-size: 1rem;
-  }
-  .blog-card {
-    gap: 1rem;
+/* ---------------- GLOBAL ---------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ---------------- WRAPPER ---------------- */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
+}
+
+/* ---------------- FRONT CIRCLE ---------------- */
+.circle {
+  width: 260px;
+  height: 260px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Smaller screens */
+@media (max-width: 480px) {
+  .circle {
+    width: 180px;
+    height: 180px;
   }
 }
+
+/* ---------------- BLOG CARD GRID ---------------- */
+.blog-card {
+  display: grid;
+  gap: 20px;
+
+  /* Makes the grid fully responsive */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  opacity: 0;
+  transform: scale(0.9);
+  transition: 0.6s ease-in-out;
+}
+
+/* ---------------- INDIVIDUAL CARD ---------------- */
+.card {
+  background: #111;
+  border-radius: 12px;
+  padding: 15px;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s ease-in-out;
+}
+
+/* Text inside card */
+.card-content {
+  text-align: center;
+}
+
+/* ---------------- RESPONSIVE IMAGES ---------------- */
+.video-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ---------------- SMALL PHONE FIXES ---------------- */
+@media (max-width: 360px) {
+  .card {
+    padding: 10px;
+  }
+  .blog-card {
+    gap: 15px;
+  }
+}
+
 
