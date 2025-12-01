@@ -38,6 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Accept okay");
     });
   });
+// Smooth welcome message when page loads
+window.addEventListener("load", function () {
+    console.log("Page Loaded Successfully!");
+    alert(" You're Welcome Racer!! Just refill the tank to Enjoy");
+});
+
 
 
 
