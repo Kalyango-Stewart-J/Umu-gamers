@@ -1,13 +1,15 @@
 document.querySelectorAll(".read-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
-        e.preventDefault(); // stops link from opening immediately
-        alert("This will open the futuristic blog page. (Demo mode)");
+        e.preventDefault(); // stop default behavior
 
-        // Optional: open the link manually after alert
+        alert("HEY feel free to continue....... (Demo mode)");
+
+        // Now go to the linked page
         const link = btn.dataset.link;
-        if (link) window.location.href = link;
+        window.location.href = link;
     });
 });
+
 
 
 
