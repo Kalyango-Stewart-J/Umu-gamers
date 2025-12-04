@@ -144,9 +144,21 @@
                 <div class="card-body">
                     <h5 style="text-align: center;">Race Recaps</h5>
                     <p style="color: white;">Summarize results, highlight winners,discuss surprises.</p>
-                  <button class="cyber-btn center-btn read-btn" data-link="readmore.html">
-    CLICK HERE
-</button>
+                  <button class="cyber-btn center-btn read-btn" data-link="readmore.html">CLICK HERE</button>
+                    <script>
+    document.querySelectorAll(".read-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault(); // stop instant navigation
+
+            alert("This will open the futuristic blog page. (Demo mode)");
+
+           
+            const link = btn.dataset.link;
+            window.location.href = link;
+        });
+    });
+</script>
+
 
                    
 
