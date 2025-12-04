@@ -1,8 +1,14 @@
 document.querySelectorAll(".read-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        alert("Hey-- Feel free to continue. (Demo mode)");
+    btn.addEventListener("click", (e) => {
+        e.preventDefault(); // stops link from opening immediately
+        alert("This will open the futuristic blog page. (Demo mode)");
+
+        // Optional: open the link manually after alert
+        const link = btn.dataset.link;
+        if (link) window.location.href = link;
     });
 });
+
 
 
 function goToTop() {
