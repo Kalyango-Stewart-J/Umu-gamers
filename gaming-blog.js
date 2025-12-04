@@ -1,6 +1,6 @@
 document.querySelectorAll(".read-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-        alert("Hey-- Feel free to continue. (Game mode)");
+        alert("Hey-- Feel free to continue. (Demo mode)");
     });
 });
 
